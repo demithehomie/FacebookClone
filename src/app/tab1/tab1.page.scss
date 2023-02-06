@@ -1,0 +1,30 @@
+.post-cards {
+    max-width: 500px; //define como largura máxima 500 pixels 
+    display: flex;  //centralizar
+    flex-direction: column;
+    margin: auto; //centralizar
+    margin-top: 150px; //afasta do topo em 250 pixels
+    //text-align: center;
+    min-width: 60px;
+    padding-left: 25px;
+    min-height: 300px;
+}
+
+.post-input {
+    min-height: 200px;
+    max-height: 250px;
+    margin-top: 50px;
+    min-width: 380px;
+    max-width: 400px;
+    display: flex ;
+    margin: auto;
+   
+
+
+}
+
+.botoes {
+    display: flex; 
+    flex-direction: row; 
+    margin: auto;
+}

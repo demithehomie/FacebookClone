@@ -34,22 +34,24 @@ export class Tab3Page {
           text: 'Cancel',
           role: 'cancel',
           handler: () => {
-            this.handlerMessage = 'Alert canceled';
+            this.handlerMessage = 'Alerta cancelado';
           },
         },
         {
           text: 'OK',
           role: 'confirm',
           handler: () => {
-            this.handlerMessage = 'Alert confirmed';
+            this.handlerMessage = 'Alerta confirmado';
           },
         },
       ],
     });
 
-    await alert.present();
+    await alert.present(
+
+    );
 
     const { role } = await alert.onDidDismiss();
-    this.roleMessage = `Dismissed with role: ${role}`;
+    this.roleMessage = `Alerta desativado: ${role}`;
   }
 }
