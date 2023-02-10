@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { NavController } from '@ionic/angular';
+import { Post } from 'src/app/interfaces/post';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-post',
@@ -7,9 +11,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostPage implements OnInit {
 
-  constructor() { }
+  constructor(
+      private formBuilder: FormBuilder,
+      private postsService: PostService,
+      public navCtrl: NavController
+    ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.validaForm();
+  }
+
+  post: Post = {
+    id: 0,
+    username: "",
+    description: "",
+    created_at: "",
+    isPublished: false
+  }
+
+
+  validaForm() {
+    // Adicione a lógica de validação aqui
   }
 
 }
